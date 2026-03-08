@@ -4,6 +4,156 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary-color: rgb(15, 70, 130);
+    --secondary-color: rgb(48, 146, 203);
+    --tertiary-color: rgb(250, 163, 0);
+}
+
 body {
     scroll-behavior: smooth;
+}
+
+.circle {
+    border-radius: 50%
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-ali {
+    align-items: center;
+}
+
+
+header{
+    background-color: var(--primary-color);
+    padding: 20px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.title{
+    margin-left: 2%;
+    text-shadow: 3px 3px #0c215d;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+.title, nav a {
+    color: white;
+}
+
+nav{
+    gap: 30px;
+    margin-right: 5%;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 24px;
+    position: relative
+}
+
+nav a::before{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -5px;
+    transition: 200ms ease-in;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.col {
+    display: flex;
+}
+
+#hero{
+    padding-top: 25vh;
+}
+
+#hero .hero-content {
+    margin: 0 auto;
+    gap: 100px;
+}
+
+#hero img {
+    width: 600px;
+    height: 450px;
+}
+
+.hero-text {
+    font-size: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+}
+
+.hero-text #main-text{
+    color: var(--primary-color);
+}
+
+#apply-btn{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    transition: 300ms ease-in;
+}
+
+#apply-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.hero-img{
+    position: relative;
+}
+
+.hero-img img{
+    border: 4px double var(--tertiary-color);
+    outline: 4px solid var(--primary-color);
+}
+
+.hero-img svg {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    stroke: black;
+    z-index: 10;
+}
+
+#bow{
+    fill: var(--primary-color);
+    top:-40px;
+    right: -10px;
+}
+
+
+section{
+    height: 100vh;
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+.step-img img {
+    width: 50px; 
+    height: 50px;
+
 }

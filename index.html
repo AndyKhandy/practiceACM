@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="flex">
-      <div class="title flex">
+    <header class="flex flex-ali">
+      <div class="title flex flex-ali">
         <h1 id="website-title">Maverick Archery</h1>
         <img
           id="website-logo"
@@ -16,10 +16,11 @@
           alt=""
           width="50px"
           height="50px"
+          class="circle"
         />
       </div>
 
-      <nav id="links">
+      <nav id="links" class="flex flex-ali">
         <a href="">About Us</a>
         <a href="">Apply</a>
         <a href="">Events</a>
@@ -28,16 +29,19 @@
 
     <main>
       <section id="hero" class="col">
-        <div class="hero-text">
-          <h1 id="main-text">Aim your Sights on this club</h1>
-          <p id="club-description">
-            At Maverick Archery Club, we welcome everyone from all skill levels
-            whether you haven't held a bow or you've been competiting for years.
-          </p>
-          <button id="apply-btn">Sign Up</button>
-        </div>
-        <div class="hero-img">
-          <img src="img/hero-section.png" alt="" />
+        <div class="hero-content flex">
+          <div class="hero-text flex">
+            <h1 id="main-text">Aim your Sights Here</h1>
+            <p id="club-description" class="bolder">
+              At Maverick Archery Club, we welcome everyone from all skill
+              levels whether you haven't held a bow or you've been competiting
+              for years.
+            </p>
+            <button id="apply-btn" class="bolder">SIGN UP</button>
+          </div>
+          <div class="hero-img">
+            <img src="img/hero-section.png" alt="" />
+            <svg id="bow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.03 6.03L20 7L22 2L17 4L17.97 4.97L16.15 6.79C10.87 2.16 3.3 3.94 2.97 4L2 4.26L2.5 6.2L3.29 6L10.12 12.82L6.94 16H5L2 19L4 20L5 22L8 19V17.06L11.18 13.88L18 20.71L17.81 21.5L19.74 22L20 21.03C20.06 20.7 21.84 13.13 17.21 7.85L19.03 6.03M4.5 5.78C6.55 5.5 11.28 5.28 14.73 8.21L10.82 12.12L4.5 5.78M18.22 19.5L11.88 13.18L15.79 9.27C18.72 12.72 18.5 17.45 18.22 19.5Z" /></svg>
         </div>
       </section>
 
@@ -45,48 +49,43 @@
         <h2 class="section-heading">How To Join?</h2>
         <div class="join-steps">
           <div class="step-group">
-    
             <div class="step-container">
-
               <div class="step-img">
-                <img src="img/join-waiver.jpg" alt="">
+                <img src="img/join-waiver.jpg" alt="" />
               </div>
               <div class="step-description">
-                    <h3>Sign the Safety Waiver</h3>
+                <h3>Sign the Safety Waiver</h3>
               </div>
             </div>
 
             <div class="step-container">
               <div class="step-img">
-                <img src="img/join-quiz.png" alt="">
+                <img src="img/join-quiz.png" alt="" />
               </div>
               <div class="step-description">
-                    <h3>Complete the Safety Quiz</h3>
+                <h3>Complete the Safety Quiz</h3>
               </div>
             </div>
-
           </div>
 
           <div class="step-group">
-    
             <div class="step-container">
               <div class="step-img">
-                <img src="img/join-trials.png" alt="">
+                <img src="img/join-trials.png" alt="" />
               </div>
               <div class="step-description">
-                    <h3>Attend 2 Free Archery Trials</h3>
+                <h3>Attend 2 Free Archery Trials</h3>
               </div>
             </div>
 
             <div class="step-container">
               <div class="step-img">
-                <img src="img/join-fee.png" alt="">
+                <img src="img/join-fee.png" alt="" />
               </div>
               <div class="step-description">
-                    <h3>Pay Membership Fee ($35)</h3>
+                <h3>Pay Membership Fee ($35)</h3>
               </div>
             </div>
-
           </div>
         </div>
       </section>
