@@ -12,6 +12,9 @@
 
 body {
     scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .circle {
@@ -68,7 +71,7 @@ nav a{
     position: relative
 }
 
-nav a::before{
+nav a::before, .section-heading::before{
     content: "";
     display: block;
     width: 0%;
@@ -84,16 +87,8 @@ nav a:hover::before{
 }
 
 .col {
-    display: flex;
-}
-
-#hero{
-    padding-top: 25vh;
-}
-
-#hero img {
-    width: 600px;
-    height: 450px;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-text {
@@ -124,7 +119,7 @@ nav a:hover::before{
     scale: 1.1;
 }
 
-.hero-img{
+.hero-img {
     position: relative;
 }
 
@@ -132,26 +127,28 @@ nav a:hover::before{
     border: 4px double var(--tertiary-color);
     outline: 4px solid var(--primary-color);
     object-fit: cover;
+    width: 100%;
+    height: auto;    
 }
 
 .hero-img svg {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 25%;
     stroke: black;
     z-index: 10;
 }
 
 #bow{
     fill: var(--primary-color);
-    top:-40px;
-    right: -10px;
+    top: -14%;
+    right: -6%;
 }
 
-section, .footer-content, .calendar{
-    height: 100vh;
-    max-width: 1100px;
-    margin: 0px auto;
+section, .footer-content{
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0px 50px 100px 50px;
     gap: 50px;
 }
 
@@ -164,6 +161,10 @@ section:not(:first-of-type)
     animation-range: entry 0% cover 40%;
 }
 
+.section-heading::before{
+    width: 100%;
+}
+
 @keyframes fade-in {
     to{
         scale: 1;
@@ -171,14 +172,16 @@ section:not(:first-of-type)
     }
 }
 
+
 .section-heading{
     color: var(--primary-color);
     font-size: 50px;
+    position: relative;
 }
 
 /*JOIN SECTION*/
 
-#join {
+#join, #calendar {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -188,21 +191,12 @@ section:not(:first-of-type)
 
 .join-steps{
     width: 100%;
-    display: grid;
-    place-items: center;
-}
-
-.step-group{
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 50px;
-    transform: translateY(30px);
 }
 
-.step-group:nth-of-type(1)
-{
-    margin-bottom: 60px;
+.join-steps a {
+    width: 100%;
 }
 
 .step-container{
@@ -216,6 +210,14 @@ section:not(:first-of-type)
     transition: 500ms;
     cursor: pointer;
     opacity: 0.9;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.step-container h3{
+    text-shadow: 2px 0px #000000;
+    color: white;
+    font-size: 30px;
 }
 
 .step-container:hover{
@@ -224,37 +226,35 @@ section:not(:first-of-type)
     opacity: 1;
 }
 
+.step-description{
+    gap: 5px;
+}
+
+.step-description, .step-container h2, .join-steps{
+    display: grid;
+    place-items: center;
+}
+
+.step-container p{
+    text-align: center;
+    width: 60%;
+    color: black;
+    font-size: 18px;
+}
+
 .step-container h2 {
+    width: 50px;
+    height: 50px;
     font-size: 35px;
     font-weight: bolder;
-    display: block;
     background-color: var(--primary-color);
-    padding: 20px;
     position: absolute;
     left:0px;
     top:0px;
     transform: translateY(-50%) translateX(-25%);
 }
 
-.step-container h3{
-    font-size: 24px;
-}
-
-.step-img img {
-    width: 100px; 
-    height: 100px;
-}
-
 /*EVENTS*/
-#activites img{
-    width: 100%;
-    height: 400px;
-    border-radius: 20px;
-    border: 2px solid black;
-    object-fit: cover;
-    
-}
-
 #activites {
     text-align: center;
     flex-direction: column;
@@ -262,6 +262,7 @@ section:not(:first-of-type)
     align-items: center;
     color: var(--secondary-color);
     font-size: 24px;
+    margin-top: -100px;
 }
 
 #activites .cards{
@@ -270,19 +271,25 @@ section:not(:first-of-type)
     gap: 15px;
 }
 
+#activites .card img{
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid black;
+    object-fit: cover;
+    filter: grayscale(0.8);
+    opacity: 0.7;
+    transition: 500ms;
+}
+
 #activites .card{
     flex:1;
     transition: 500ms;
+    text-shadow: 1px 0px #010101;
 }
 
 #activites .card:hover {
     flex: 1.5;
-}
-
-#activites .card img{
-    filter: grayscale(0.8);
-    opacity: 0.7;
-    transition: 500ms;
 }
 
 #activites .card:hover img{
@@ -291,17 +298,20 @@ section:not(:first-of-type)
 }
 
 footer{
-    height: 25vh;
     background-color: var(--secondary-color);
     text-align: center;
-    padding: 10px;
+    width: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .footer-content{
-    height: 100%;
-    width: 100%;
+    min-height: 25vh;
     align-items: center;
     justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 0px;
 }
 
 .footer-content svg{
@@ -312,16 +322,6 @@ footer{
 .information {
     flex-direction: column;
     gap: 10px;
-}
-
-.calendar{
-    text-align: center;
-    height: auto;
-    margin-bottom: 100px;
-}
-
-.calendar h2{
-    margin-bottom: 50px;
 }
 
 #facebook{

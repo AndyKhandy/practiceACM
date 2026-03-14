@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UTA Maverick Archery</title>
+    <title>Maverick Archery</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
   </head>
   <body>
     <header class="flex flex-ali">
@@ -22,8 +23,8 @@
 
       <nav id="links" class="flex flex-ali">
         <a href="">About Us</a>
-        <a href="">Apply</a>
-        <a href="">Events</a>
+        <a href="">Officers</a>
+        <a href="">Gallery</a>
       </nav>
     </header>
 
@@ -48,58 +49,89 @@
         </div>
       </section>
 
+      <section id="calendar" class="col flex">
+          <h2 class="section-heading">Upcomming Events</h2>
+          <iframe
+            src="https://embed.styledcalendar.com/#8YggQYagzvi1tWgeVvJA"
+            title="Styled Calendar"
+            class="styled-calendar-container"
+            style="width: 100%; border: none"
+            data-cy="calendar-embed-iframe"
+          ></iframe>
+          <script
+            async
+            type="module"
+            src="https://embed.styledcalendar.com/assets/parent-window.js"
+          ></script>
+      </section>
+
       <section id="join" class="col flex">
         <h2 class="section-heading">How To Join?</h2>
         <div class="join-steps">
-          <div class="step-group flex">
-            <a href="https://forms.gle/SBLTvCYMt2Ck8WgNA" target="_blank">
-              <div class="step-container flex flex-ali">
-                <div class="step-img">
-                  <img src="img/join-waiver.jpg" alt="" class="circle" />
-                </div>
-                <div class="step-description">
-                  <h3>SIGN SAFETY WAIVER</h3>
-                </div>
-                <h2 class="circle">#1</h2>
-              </div>
-            </a>
-
+          <a
+            href="https://docs.google.com/presentation/d/1kjTkyrdhP_77AEluwcR_XQlu_vTJTeu-LKYtO5ZU600/edit?usp=sharing"
+            target="_blank"
+          >
             <div class="step-container flex flex-ali">
-              <div class="step-img">
-                <img src="img/join-quiz.png" alt="" class="circle" />
-              </div>
               <div class="step-description">
-                <h3>COMPLETE SAFETY QUIZ</h3>
+                <h3>Maverick Archery PPT</h3>
+                <p>
+                  Glance at the Powerpoint to learn more about our current
+                  officers, safety rules, and general information for the quiz
+                </p>
               </div>
-              <h2 class="circle">#2</h2>
+              <h2 class="circle">1</h2>
             </div>
-          </div>
+          </a>
 
-          <div class="step-group flex">
+          <a href="https://forms.gle/uB1kwFG7mCAQQ98d7" target="_blank">
             <div class="step-container flex flex-ali">
-              <div class="step-img">
-                <img src="img/join-trials.png" alt="" class="circle" />
-              </div>
               <div class="step-description">
-                <h3>ATTEND 2 FREE TRIALS</h3>
+                <h3>Waiver and Safety Quiz</h3>
+                <p>
+                  Sign the Safety Waiver and score a 10/10 on the Safety Quiz.
+                  Then email it to maverickarchery@gmail.com
+                </p>
               </div>
-              <h2 class="circle">#3</h2>
+              <h2 class="circle">2</h2>
             </div>
+          </a>
 
+          <a
+            href="https://groupme.com/join_group/63066764/rVjkuVQh?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnLwR3L7bZ-kb75LdxtiIhSzVgIVijCgMwOilbIUSl56HQtImOL3gnqkPz_cE_aem_7nzR1ZsyRBh0R5gsM4qNgg" target="_blank"
+          >
             <div class="step-container flex flex-ali">
-              <div class="step-img">
-                <img src="img/join-fee.png" alt="" class="circle" />
-              </div>
               <div class="step-description">
-                <h3>PAY MEMBERSHIP ($35)</h3>
+                <h3>Attend Free Trials</h3>
+                <p>
+                  Come get an initial training from our Range Safety Officers
+                  (RSO) and try out our bows with your 2 free trials
+                </p>
               </div>
-              <h2 class="circle">#4</h2>
+              <h2 class="circle">3</h2>
             </div>
-          </div>
+          </a>
+
+          <a
+            href="https://secure.touchnet.net/C21611_ustores/web/store_main.jsp?STOREID=98&SINGLESTORE=true"
+            target="_blank"
+          >
+            <div class="step-container flex flex-ali">
+              <div class="step-description">
+                <h3>Pay Memership Fees ($35)</h3>
+                <p>
+                  Hopefully, if you begin to enjoy archery, you can join as a
+                  member (one yearly fee that covers both Fall and Spring
+                  Semester)
+                </p>
+              </div>
+              <h2 class="circle">4</h2>
+            </div>
+          </a>
         </div>
       </section>
 
-      <section id="activites" class="col">
+      <section id="activites" class="col flex">
         <h2 class="section-heading">Our Popular Events</h2>
         <div class="cards flex flex-ali">
           <div class="card">
@@ -117,22 +149,6 @@
           </div>
         </div>
       </section>
-
-      <div class="calendar">
-        <h2 class="section-heading">Upcomming Events</h2>
-        <iframe
-          src="https://embed.styledcalendar.com/#8YggQYagzvi1tWgeVvJA"
-          title="Styled Calendar"
-          class="styled-calendar-container"
-          style="width: 100%; border: none"
-          data-cy="calendar-embed-iframe"
-        ></iframe>
-        <script
-          async
-          type="module"
-          src="https://embed.styledcalendar.com/assets/parent-window.js"
-        ></script>
-      </div>
     </main>
 
     <footer>
