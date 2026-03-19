@@ -109,6 +109,65 @@ nav svg{
     align-items: center;
 }
 
+.sidebar svg, nav svg{
+    cursor: pointer;
+}
+
+.sidebar{
+    z-index: 9999;
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--primary-color);
+    height: 100%;
+    width: 0px;
+
+    transition: 300ms ease-in;
+}
+
+.sidebar.active{
+    width: 90%;
+}
+
+.sidebar svg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    fill: white;
+}
+
+.sidebar ul {
+    display: block;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+.sidebar-links{
+    flex-direction: column;
+}
+
+.sidebar-links a{
+    width: 100%;
+    min-height: 100%;
+    padding: 25px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+.sidebar-links a:first-child{
+    margin-top: 50px;
+}
+
+.sidebar-links a:hover{
+    border-bottom: none;
+    background-color: var(--secondary-color);
+}
+
 .hero-text {
     font-size: 40px;
     flex-direction: column;

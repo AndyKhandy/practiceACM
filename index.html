@@ -8,6 +8,24 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
   </head>
   <body>
+    <div class="sidebar">
+      <svg
+        id="close-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          aria-label="close button"
+        />
+      </svg>
+      <div class="sidebar-links flex">
+        <a href="#calendar" class="bolder">Calendar</a>
+        <a href="#join" class="bolder">Join</a>
+        <a href="#activites" class="bolder">Events</a>
+      </div>
+    </div>
+
     <header class="flex flex-ali">
       <div class="title flex flex-ali">
         <h1 id="website-title">Maverick Archery</h1>
@@ -22,8 +40,15 @@
       </div>
 
       <nav id="links" class="flex flex-ali">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M3,8V7H20V8H3M20,12V13H3V12H20M3,17H20V18H3V17Z" />
+        <svg
+          id="menu-btn"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M3,8V7H20V8H3M20,12V13H3V12H20M3,17H20V18H3V17Z"
+            aria-label="menu button"
+          />
         </svg>
         <a href="#calendar">Calendar</a>
         <a href="#join">Join</a>
@@ -226,5 +251,6 @@
         </div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
